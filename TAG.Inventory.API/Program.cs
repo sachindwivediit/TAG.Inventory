@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using TAG.Inventory.Repository;
+using TAG.Inventory.Repository.Implementation;
+using TAG.Inventory.Repository.Interface;
 
 namespace TAG.Inventory.API
 {
@@ -16,6 +18,7 @@ namespace TAG.Inventory.API
             builder.Services.AddDbContext<ApplicationDbContext>(
                 options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("TAG.Inventory.API")));
 
+            builder.Services.AddScoped<IRepository, RepositoryClass>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
