@@ -7,14 +7,14 @@ using TAG.Inventory.Entities;
 
 namespace TAG.Inventory.Repository.Interface
 {
-    public interface IRepository
+    public interface IRepository<T>
     {
-        Task<List<Product>> GetAll();
-        Task<Product> GetById(int id);
+        Task<List<T>> GetAll();
+        Task<T> GetById(int id);
 
-        Task Add(Product product);
+        Task Add(T product);
 
-        Task Update(Product product);
-        Task Delete(Product product);
+        Task Update(T product);
+        Task Delete(T product);
     }
 }

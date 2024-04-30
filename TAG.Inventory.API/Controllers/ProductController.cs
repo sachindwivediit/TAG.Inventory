@@ -8,9 +8,9 @@ namespace TAG.Inventory.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IRepository _repository;
+        private readonly IRepository<Product> _repository;
 
-        public ProductController(IRepository repository)
+        public ProductController(IRepository<Product> repository)
         {
             _repository = repository;
         }

@@ -9,11 +9,11 @@ using TAG.Inventory.Repository.Interface;
 
 namespace TAG.Inventory.Repository.Implementation
 {
-    public class RepositoryClass : IRepository
+    public class GenericRepository : IRepository<Product>
     {
         private readonly ApplicationDbContext _context;
 
-        public RepositoryClass(ApplicationDbContext context)
+        public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
         }
