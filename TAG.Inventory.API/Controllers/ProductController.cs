@@ -17,24 +17,45 @@ namespace TAG.Inventory.API.Controllers
 
         // GET: api/<ProductController>
         [HttpGet("GetAll")]
-        public async Task<IEnumerable<Product>> Get()
+        public async Task<IActionResult> Get()
         {
-            return await _repository.GetAll();
+            var result =  await _repository.GetAll();
+            if (result.Count > 0)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // GET api/<ProductController>/5
         [HttpGet("GetByid/{id}")]
-        public async Task<Product> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return await _repository.GetById(id);
+            var result = await _repository.GetById(id);
+            if (result!=null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // POST api/<ProductController>
         [HttpPost("Add")]
         public async Task<IActionResult> Post([FromBody] Product product)
         {
-            await _repository.Add(product);
-            return Ok();
+            if (product != null)
+            {
+                await _repository.Add(product);
+                return Ok();
+            }
+            return BadRequest();
+          
         }
 
         // PUT api/<ProductController>/5
