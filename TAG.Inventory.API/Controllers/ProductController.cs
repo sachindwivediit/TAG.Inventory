@@ -16,21 +16,21 @@ namespace TAG.Inventory.API.Controllers
         }
 
         // GET: api/<ProductController>
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<IEnumerable<Product>> Get()
         {
             return await _repository.GetAll();
         }
 
         // GET api/<ProductController>/5
-        [HttpGet("{id}")]
+        [HttpGet("GetByid/{id}")]
         public async Task<Product> Get(int id)
         {
             return await _repository.GetById(id);
         }
 
         // POST api/<ProductController>
-        [HttpPost]
+        [HttpPost("Add")]
         public async Task<IActionResult> Post([FromBody] Product product)
         {
             await _repository.Add(product);
@@ -38,7 +38,7 @@ namespace TAG.Inventory.API.Controllers
         }
 
         // PUT api/<ProductController>/5
-        [HttpPut("{id}")]
+        [HttpPut("Update/{id}")]
         public async Task<IActionResult> Put([FromBody] Product product, int id)
         {
             if (id > 0)
@@ -68,7 +68,7 @@ namespace TAG.Inventory.API.Controllers
         }
 
         // DELETE api/<ProductController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("Remove/{id}")]
         public async Task<IActionResult> Delete(Product product,int id)
         {
             if (id > 0)
