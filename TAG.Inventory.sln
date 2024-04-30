@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAG.Inventory.API", "TAG.Inventory.API\TAG.Inventory.API.csproj", "{17C7F7D6-6DED-451D-A769-E1330B455AEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAG.Inventory.Entities", "TAG.Inventory.Entities\TAG.Inventory.Entities.csproj", "{0448DBEA-2BFD-49E1-B686-B0B74009B0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAG.Inventory.Repository", "TAG.Inventory.Repository\TAG.Inventory.Repository.csproj", "{B80C6B47-BE79-43AF-9CFF-49F08F9B017B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{17C7F7D6-6DED-451D-A769-E1330B455AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C7F7D6-6DED-451D-A769-E1330B455AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C7F7D6-6DED-451D-A769-E1330B455AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0448DBEA-2BFD-49E1-B686-B0B74009B0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0448DBEA-2BFD-49E1-B686-B0B74009B0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0448DBEA-2BFD-49E1-B686-B0B74009B0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0448DBEA-2BFD-49E1-B686-B0B74009B0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80C6B47-BE79-43AF-9CFF-49F08F9B017B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80C6B47-BE79-43AF-9CFF-49F08F9B017B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80C6B47-BE79-43AF-9CFF-49F08F9B017B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80C6B47-BE79-43AF-9CFF-49F08F9B017B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
